@@ -34,19 +34,21 @@ chore_list = Recommendation.create!([
   {recommendation: "do the dishes", group: "chore"},
 ])
 
-running = zach.habits.create!([
-  {name: "running", motivation: "weight loss", type: "daily"},
-  {name: "cycling", motivation: "weight loss and commute", type: "daily"},
+running = zach.habits.create!(
+  {name: "running", motivation: "weight loss", category: "daily"}
+)
+cycling = zach.habits.create!(
+  {name: "cycling", motivation: "weight loss and commute", category: "daily"}
+)
+
+r_completions = Completion.create! ([
+  {date_completed: Date.new(2018, 2, 18).to_s, data_one: "1.1", data_two: nil, data_three: nil, note: "It rained today", habit: running, user: zach},
+  {date_completed: Date.new(2018, 2, 17).to_s, data_one: "1.4", data_two: nil, data_three: nil, note: "It snowed today", habit: running, user: zach},
+  {date_completed: Date.new(2018, 2, 15).to_s, data_one: "0.8", data_two: nil, data_three: nil, note: "Had to turn around midway, pulled my ankle", habit: running, user: zach},
 ])
 
-r_completions = running.completions.create! ([
-  {date_completed: Date.new(2018, 2, 18).to_s, data_one: "1.1", data_two: nil, data_three: nil, note: "It rained today", user: zach},
-  {date_completed: Date.new(2018, 2, 17).to_s, data_one: "1.4", data_two: nil, data_three: nil, note: "It snowed today", user: zach},
-  {date_completed: Date.new(2018, 2, 15).to_s, data_one: "0.8", data_two: nil, data_three: nil, note: "Had to turn around midway, pulled my ankle", user: zach},
-])
-
-c_completions = running.completions.create! ([
-  {date_completed: Date.new(2018, 2, 18).to_s, data_one: "3.2", data_two: nil, data_three: nil, note: nil, user: zach},
-  {date_completed: Date.new(2018, 2, 16).to_s, data_one: "3.2", data_two: nil, data_three: nil, note: nil, user: zach},
-  {date_completed: Date.new(2018, 2, 14).to_s, data_one: "3.2", data_two: nil, data_three: nil, note: "They were towing cars in the National Mall again", user: zach},
+c_completions = Completion.create! ([
+  {date_completed: Date.new(2018, 2, 18).to_s, data_one: "3.2", data_two: nil, data_three: nil, note: nil, habit: cycling, user: zach},
+  {date_completed: Date.new(2018, 2, 16).to_s, data_one: "3.2", data_two: nil, data_three: nil, note: nil, habit: cycling, user: zach},
+  {date_completed: Date.new(2018, 2, 14).to_s, data_one: "3.2", data_two: nil, data_three: nil, note: "They were towing cars in the National Mall again", habit: cycling, user: zach},
 ])
