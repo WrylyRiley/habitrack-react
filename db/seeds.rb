@@ -1,3 +1,4 @@
+require 'date'
 # This file should contain all the record creation needed to seed the database with its default values.
 # The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
 #
@@ -33,6 +34,19 @@ chore_list = Recommendation.create!([
   {recommendation: "do the dishes", group: "chore"},
 ])
 
-zach_running = zach.habits.create!([
-  {name: "running", motivation: "weight loss", type: "daily"}, ,
+running = zach.habits.create!([
+  {name: "running", motivation: "weight loss", type: "daily"},
+  {name: "cycling", motivation: "weight loss and commute", type: "daily"},
+])
+
+r_completions = running.completions.create! ([
+  {date_completed: Date.new(2018, 2, 18).to_s, data_one: "1.1", data_two: nil, data_three: nil, note: "It rained today", user: zach},
+  {date_completed: Date.new(2018, 2, 17).to_s, data_one: "1.4", data_two: nil, data_three: nil, note: "It snowed today", user: zach},
+  {date_completed: Date.new(2018, 2, 15).to_s, data_one: "0.8", data_two: nil, data_three: nil, note: "Had to turn around midway, pulled my ankle", user: zach},
+])
+
+c_completions = running.completions.create! ([
+  {date_completed: Date.new(2018, 2, 18).to_s, data_one: "3.2", data_two: nil, data_three: nil, note: nil, user: zach},
+  {date_completed: Date.new(2018, 2, 16).to_s, data_one: "3.2", data_two: nil, data_three: nil, note: nil, user: zach},
+  {date_completed: Date.new(2018, 2, 14).to_s, data_one: "3.2", data_two: nil, data_three: nil, note: "They were towing cars in the National Mall again", user: zach},
 ])
