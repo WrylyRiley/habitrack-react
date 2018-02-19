@@ -62,13 +62,14 @@ class HabitsController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_habit
-      @habit = Habit.find(params[:id])
-    end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def habit_params
-      params.require(:habit).permit(:name, :type, :user_id, :time_scale, :motivation)
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_habit
+    @habit = Habit.find(params[:id])
+  end
+
+  # Never trust parameters from the scary internet, only allow the white list through.
+  def habit_params
+    params.require(:habit).permit(:name, :type, :user_id, :time_scale, :motivation)
+  end
 end

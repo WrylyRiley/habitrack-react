@@ -9,3 +9,5 @@
 User.delete_all
 Habit.delete_all
 Completion.delete_all
+
+zach = User.create
