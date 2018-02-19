@@ -9,5 +9,24 @@
 User.delete_all
 Habit.delete_all
 Completion.delete_all
+Recommendation.delete_all
 
-zach = User.create
+# Recommendations
+
+exercise_list = Recommendation.create([
+  {recommendation: "running", group: "exercise"},
+  {recommendation: "walking", group: "exercise"},
+  {recommendation: "swimming", group: "exercise"},
+  {recommendation: "cycling", group: "exercise"},
+  {recommendation: "weight lifting", group: "exercise"},
+])
+improvement_list = Recommendation.create([
+  {recommendation: "meditation", group: "personal improvement"},
+  {recommendation: "10 minutes of relaxation", group: "personal improvement"},
+  {recommendation: "yoga", group: "personal improvement"},
+])
+chore_list = Recommendation.create([
+  {recommendation: "clean house", group: "chore"},
+  {recommendation: "clean out car", group: "chore"},
+  {recommendation: "do the dishes", group: "chore"},
+])
