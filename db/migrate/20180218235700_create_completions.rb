@@ -1,7 +1,7 @@
 class CreateCompletions < ActiveRecord::Migration[5.1]
   def change
     create_table :completions do |t|
-      t.integer :date_completed
+      t.string :date_completed
       t.string :note
       t.references :habit
       t.references :user

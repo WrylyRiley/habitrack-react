@@ -16,7 +16,7 @@ ActiveRecord::Schema.define(version: 20180218235700) do
   enable_extension "plpgsql"
 
   create_table "completions", force: :cascade do |t|
-    t.integer "date_completed"
+    t.string "date_completed"
     t.string "note"
     t.bigint "habit_id"
     t.bigint "user_id"
