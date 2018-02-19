@@ -33,7 +33,6 @@ ActiveRecord::Schema.define(version: 20180218235700) do
     t.string "name"
     t.string "type"
     t.bigint "user_id"
-    t.string "time_scale"
     t.string "motivation"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
