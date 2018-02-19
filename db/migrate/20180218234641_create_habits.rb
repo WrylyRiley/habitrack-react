@@ -3,7 +3,7 @@ class CreateHabits < ActiveRecord::Migration[5.1]
     create_table :habits do |t|
       t.string :name
       t.string :type
-      t.reference :user
+      t.references :user
       t.string :time_scale
       t.string :motivation
 
