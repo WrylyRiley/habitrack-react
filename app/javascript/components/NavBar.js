@@ -15,24 +15,26 @@ class NavBar extends React.Component {
     navDrawerOpen: false
   }
 
-  menuButtonClick = prevState => {
+  menuHandler = () => {
     // toggles true and false of the open state of the nav drawer
     this.setState({
-      navDrawerOpen: !prevState.navDrawerOpen
+      navDrawerOpen: !this.state.navDrawerOpen
     })
   }
 
-  render() {
+  render = () => {
     return (
       <div>
         <AppBar>
           <Toolbar>
-            {/* <NavDrawer open={this.state.navDrawerOpen} /> */}
-            <IconButton onClick={this.menuButtonClick}>
+            <NavDrawer
+              open={this.state.navDrawerOpen}
+              closeMenu={this.menuHandler}
+            />
+            <IconButton onClick={this.menuHandler}>
               <MenuIcon />
             </IconButton>
             <Typography variant="title">HabiTrack</Typography>
-            {/* Title */}
           </Toolbar>
         </AppBar>
       </div>

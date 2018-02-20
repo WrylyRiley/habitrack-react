@@ -1,0 +1,63 @@
+// Default Imports
+import React from 'react'
+import PropTypes from 'prop-types'
+// Material-UI Imports
+import { ListItem, ListItemIcon, ListItemText } from 'material-ui/List'
+import HomeIcon from 'material-ui-icons/Home'
+import UserIcon from 'material-ui-icons/AccountCircle'
+import DashIcon from 'material-ui-icons/Dashboard'
+import LockOpenIcon from 'material-ui-icons/LockOpen'
+import ContactIcon from 'material-ui-icons/Contacts'
+import FPIcon from 'material-ui-icons/Fingerprint'
+
+// Lists
+export const mainNavMenuItems = (
+  <div>
+    <ListItem button>
+      <ListItemIcon>
+        <HomeIcon />
+      </ListItemIcon>
+      <ListItemText primary='Home Page' />
+    </ListItem>
+    <ListItem button>
+      <ListItemIcon>
+        <DashIcon />
+      </ListItemIcon>
+      <ListItemText primary='Dashboard' />
+    </ListItem>
+    <ListItem button>
+      <ListItemIcon>
+        <UserIcon />
+      </ListItemIcon>
+      <ListItemText primary='Account' />
+    </ListItem>
+  </div>
+)
+
+export const loggedInItems = (
+  <div>
+    <ListItem button>
+      <ListItemIcon>
+        <LockOpenIcon />
+      </ListItemIcon>
+      <ListItemText primary='Log Out' />
+    </ListItem>
+  </div>
+)
+
+export const loggedOutItems = (
+  <div>
+    <ListItem button>
+      <ListItemIcon>
+        <FPIcon />
+      </ListItemIcon>
+      <ListItemText primary='Sign Up' />
+    </ListItem>
+    <ListItem button>
+      <ListItemIcon>
+        <ContactIcon />
+      </ListItemIcon>
+      <ListItemText primary='Sign In' />
+    </ListItem>
+  </div>
+)
