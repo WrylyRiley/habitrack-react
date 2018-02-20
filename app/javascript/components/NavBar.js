@@ -25,7 +25,7 @@ class NavBar extends React.Component {
   render() {
     return (
       <div>
-        <AppBar position="static">
+        <AppBar>
           <Toolbar>
             {/* <NavDrawer open={this.state.navDrawerOpen} /> */}
             <IconButton onClick={this.menuButtonClick}>
