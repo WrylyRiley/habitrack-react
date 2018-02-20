@@ -24,7 +24,7 @@ class NavBar extends React.Component {
 
   render = () => {
     return (
-      <div>
+      <React.Fragment>
         <AppBar>
           <Toolbar>
             <NavDrawer
@@ -37,7 +37,7 @@ class NavBar extends React.Component {
             <Typography variant="title">HabiTrack</Typography>
           </Toolbar>
         </AppBar>
-      </div>
+      </React.Fragment>
     )
   }
 }

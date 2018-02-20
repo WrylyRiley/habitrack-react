@@ -6,9 +6,9 @@ import NavBar from './NavBar'
 class Welcome extends React.Component {
   render () {
     return (
-      <div>
+      <React.Fragment>
         <NavBar />
-      </div>
+      </React.Fragment>
     )
   }
 }

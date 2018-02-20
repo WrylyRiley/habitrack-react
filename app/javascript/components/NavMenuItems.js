@@ -12,7 +12,7 @@ import FPIcon from 'material-ui-icons/Fingerprint'
 
 // Lists
 export const mainNavMenuItems = (
-  <div>
+  <React.Fragment>
     <ListItem button>
       <ListItemIcon>
         <HomeIcon />
@@ -31,7 +31,7 @@ export const mainNavMenuItems = (
       </ListItemIcon>
       <ListItemText primary='Account' />
     </ListItem>
-  </div>
+  </React.Fragment>
 )
 
 export const loggedInItems = (

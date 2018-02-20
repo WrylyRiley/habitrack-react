@@ -36,22 +36,24 @@ class NavDrawer extends React.Component {
     )
 
     return (
-      <Drawer
-        open={this.props.open}
-        onClose={this.props.closeMenu}
-        variant="temporary"
-      >
-        <div
-          tabIndex={0}
-          role="button"
-          onClick={this.props.closeMenu}
-          onKeyDown={this.props.closeMenu}
+      <React.Fragment>
+        <Drawer
+          open={this.props.open}
+          onClose={this.props.closeMenu}
+          variant="temporary"
         >
-          <List>
-            {loggedOutList}
-          </List>
-        </div>
-      </Drawer>
+          <div
+            tabIndex={0}
+            role="button"
+            onClick={this.props.closeMenu}
+            onKeyDown={this.props.closeMenu}
+          >
+            <List>
+              {loggedOutList}
+            </List>
+          </div>
+        </Drawer>
+      </React.Fragment>
     )
   }
 }
