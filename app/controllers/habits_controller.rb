@@ -4,7 +4,7 @@ class HabitsController < ApplicationController
   # GET /habits
   # GET /habits.json
   def index
-    @habits = Habit.all
+    @habits = current_user.habits.all
   end
 
   # GET /habits/1

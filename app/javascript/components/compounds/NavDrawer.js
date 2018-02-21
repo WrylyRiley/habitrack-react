@@ -7,7 +7,11 @@ import Button from 'material-ui/Button'
 import List from 'material-ui/List'
 import Divider from 'material-ui/Divider'
 // My imports
-import { mainNavMenuItems, loggedInItems, loggedOutItems } from './NavMenuItems'
+import {
+  mainNavMenuItems,
+  loggedInItems,
+  loggedOutItems
+} from '../molecules/NavMenuItems'
 // Component
 class NavDrawer extends React.Component {
   render = () => {

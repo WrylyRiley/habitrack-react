@@ -1,16 +1,19 @@
 // Default Imports
 import React from 'react'
 import PropTypes from 'prop-types'
+
 // My Imports
-import NavBar from './compounds/NavBar'
-class Welcome extends React.Component {
+import HabitCard from './compounds/HabitCard'
+
+// Component
+class Dashboard extends React.Component {
   render () {
     return (
       <React.Fragment>
-        <NavBar />
+        {/* dashboard */}
       </React.Fragment>
     )
   }
 }
 
-export default Welcome
+export default Dashboard
