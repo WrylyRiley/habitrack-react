@@ -72,4 +72,10 @@ class HabitsController < ApplicationController
   def habit_params
     params.require(:habit).permit(:name, :type, :user_id, :time_scale, :motivation)
   end
+
+  def signedIn
+    if !current_user
+      redirect_to new_user_registration
+    end
+  end
 end

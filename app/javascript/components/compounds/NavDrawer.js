@@ -46,15 +46,20 @@ class NavDrawer extends React.Component {
           onClose={this.props.closeMenu}
           variant="temporary"
         >
+          {/* Required, but idk why */}
           <div
             tabIndex={0}
             role="button"
             onClick={this.props.closeMenu}
             onKeyDown={this.props.closeMenu}
           >
-            <List>
-              {loggedOutList}
-            </List>
+            {this.props.user
+              ? <List>
+                  {loggedInList}
+                </List>
+              : <List>
+                  {loggedOutList}
+                </List>}
           </div>
         </Drawer>
       </React.Fragment>

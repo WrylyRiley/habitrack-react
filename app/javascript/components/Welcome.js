@@ -7,7 +7,7 @@ class Welcome extends React.Component {
   render () {
     return (
       <React.Fragment>
-        <NavBar />
+        <NavBar user={this.props.user} />
       </React.Fragment>
     )
   }

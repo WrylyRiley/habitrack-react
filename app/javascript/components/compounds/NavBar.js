@@ -28,6 +28,7 @@ class NavBar extends React.Component {
         <AppBar>
           <Toolbar>
             <NavDrawer
+              user={this.props.user}
               open={this.state.navDrawerOpen}
               closeMenu={this.menuHandler}
             />
