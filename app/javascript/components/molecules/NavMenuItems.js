@@ -3,6 +3,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 // Material-UI Imports
 import { ListItem, ListItemIcon, ListItemText } from 'material-ui/List'
+import FlatButton from 'material-ui/Button'
 import HomeIcon from 'material-ui-icons/Home'
 import UserIcon from 'material-ui-icons/AccountCircle'
 import DashIcon from 'material-ui-icons/Dashboard'
@@ -13,7 +14,7 @@ import FPIcon from 'material-ui-icons/Fingerprint'
 // Lists
 export const mainNavMenuItems = (
   <React.Fragment>
-    <ListItem button>
+    <ListItem button component='a' href='/'>
       <ListItemIcon>
         <HomeIcon />
       </ListItemIcon>
@@ -35,29 +36,29 @@ export const mainNavMenuItems = (
 )
 
 export const loggedInItems = (
-  <div>
-    <ListItem button>
+  <React.Fragment>
+    <ListItem button component='a' href='/users/sign_out(.:DELETE)'>
       <ListItemIcon>
         <LockOpenIcon />
       </ListItemIcon>
       <ListItemText primary='Log Out' />
     </ListItem>
-  </div>
+  </React.Fragment>
 )
 
 export const loggedOutItems = (
-  <div>
-    <ListItem button>
+  <React.Fragment>
+    <ListItem button component='a' href='/users/sign_up'>
       <ListItemIcon>
         <FPIcon />
       </ListItemIcon>
       <ListItemText primary='Sign Up' />
     </ListItem>
-    <ListItem button>
+    <ListItem button component='a' href='/users/sign_in'>
       <ListItemIcon>
         <ContactIcon />
       </ListItemIcon>
       <ListItemText primary='Sign In' />
     </ListItem>
-  </div>
+  </React.Fragment>
 )

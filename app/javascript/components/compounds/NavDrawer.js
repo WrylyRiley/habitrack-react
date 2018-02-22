@@ -16,27 +16,19 @@ import {
 class NavDrawer extends React.Component {
   render = () => {
     const loggedInList = (
-      <div>
-        <List>
-          {mainNavMenuItems}
-        </List>
+      <React.Fragment>
+        {mainNavMenuItems}
         <Divider />
-        <List>
-          {loggedInItems}
-        </List>
-      </div>
+        {loggedInItems}
+      </React.Fragment>
     )
 
     const loggedOutList = (
-      <div>
-        <List>
-          {mainNavMenuItems}
-        </List>
+      <React.Fragment>
+        {mainNavMenuItems}
         <Divider />
-        <List>
-          {loggedOutItems}
-        </List>
-      </div>
+        {loggedOutItems}
+      </React.Fragment>
     )
 
     return (
@@ -54,10 +46,10 @@ class NavDrawer extends React.Component {
             onKeyDown={this.props.closeMenu}
           >
             {this.props.user
-              ? <List>
+              ? <List component="nav">
                   {loggedInList}
                 </List>
-              : <List>
+              : <List component="nav">
                   {loggedOutList}
                 </List>}
           </div>
