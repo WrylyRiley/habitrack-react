@@ -1,19 +1,26 @@
 {
-  "name": "habitrack",
+  "name": "habitrack-react",
+  "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@rails/webpacker": "^3.2.2",
     "axios": "^0.18.0",
-    "babel-preset-react": "^6.24.1",
     "material-ui": "^1.0.0-beta.34",
     "material-ui-icons": "^1.0.0-beta.17",
     "prop-types": "^15.6.0",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
-    "react-style-tag": "^1.4.1",
-    "react_ujs": "^2.4.4"
+    "react-router-dom": "^4.2.2",
+    "react-scripts": "1.1.1",
+    "react-style-tag": "^1.4.1"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
   },
   "devDependencies": {
-    "webpack-dev-server": "^2.11.1"
+    "chalk": "^2.3.1",
+    "morgan": "^1.9.0"
   }
 }
