@@ -4,6 +4,7 @@ class HabitsController < ApplicationController
   # GET /habits
   # GET /habits.json
   def index
+    signedIn
     @habits = current_user.habits.all
   end
 
@@ -59,6 +60,7 @@ class HabitsController < ApplicationController
       format.html { redirect_to habits_url, notice: 'Habit was successfully destroyed.' }
       format.json { head :no_content }
     end
+    redirect_to root
   end
 
   private

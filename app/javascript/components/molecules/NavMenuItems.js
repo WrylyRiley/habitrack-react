@@ -10,11 +10,20 @@ import DashIcon from 'material-ui-icons/Dashboard'
 import LockOpenIcon from 'material-ui-icons/LockOpen'
 import ContactIcon from 'material-ui-icons/Contacts'
 import FPIcon from 'material-ui-icons/Fingerprint'
+// Libraries and Frameworks
+import RBRoute from '../../RBRoute'
+
+// Axios calls
+function destroyUserSession () {
+  RBRoute().delete('users/sign_out').then(() => {
+    RBRoute().get('/')
+  })
+}
 
 // Lists
 export const mainNavMenuItems = (
   <React.Fragment>
-    <ListItem button component='a' href='/'>
+    <ListItem button>
       <ListItemIcon>
         <HomeIcon />
       </ListItemIcon>
@@ -37,7 +46,7 @@ export const mainNavMenuItems = (
 
 export const loggedInItems = (
   <React.Fragment>
-    <ListItem button component='a' href='/users/sign_out(.:DELETE)'>
+    <ListItem button onClick={destroyUserSession}>
       <ListItemIcon>
         <LockOpenIcon />
       </ListItemIcon>
