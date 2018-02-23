@@ -1,20 +1,19 @@
 import React, { Component, Fragment } from 'react'
 import { Route, Switch, Redirect } from 'react-router-dom'
-import logo from './logo.svg'
-import './App.css'
-import NavBar from './components/compounds/NavBar'
 import Welcome from './components/pages/Welcome'
+import NavBar from './components/compounds/NavBar'
 
 class App extends Component {
-  render = (
-    <div class="entry">
-      <NavBar user={this.props.user} />
+  render = () => {
+    return (
       <main>
-        <Switch>
-          <Route path="/" render={props => <Welcome {...props} />} />
-        </Switch>
+        <NavBar user={this.props.user} />
+        <Welcome />
+        {/* <Switch>
+          <Route exact path="/" component={Welcome} />
+        </Switch> */}
       </main>
-    </div>
-  )
+    )
+  }
 }
 export default App
